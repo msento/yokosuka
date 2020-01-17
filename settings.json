@@ -1,28 +1,32 @@
 {
-    "workbench.startupEditor": "newUntitledFile",
+	"workbench.startupEditor": "newUntitledFile",
     "workbench.colorTheme": "Default Light+",
-    "editor.renderWhitespace": "all",
+	"workbench.iconTheme": "vscode-icons",
+
+	"editor.renderWhitespace": "all",
     "editor.fontSize": 13,
     "editor.minimap.enabled": false,
-    "files.encoding": "shiftjis",
+	"editor.snippetSuggestions": "top",
+	"editor.tabCompletion": "on",
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.formatOnPaste": true,
+
+	"files.encoding": "shiftjis",
     "files.associations": {
         "*.oml": "html"
     },
  	"files.eol": "\n",
 	"files.autoGuessEncoding": true,
 
-	"workbench.iconTheme": "vscode-icons",
-	"editor.snippetSuggestions": "top",
-	"editor.tabCompletion": "on",
-    "editor.insertSpaces": false,
-	"editor.detectIndentation": false,
-	"editor.formatOnPaste": true,
-	
 	"vim.hlsearch": true,
 	"vim.leader": "<space>",
-	"vim.visualstar": true,
+	"vim.useSystemClipboard": true,
 	"vim.useCtrlKeys": true,
-    "vim.normalModeKeyBindingsNonRecursive": [
+	"vim.cursorStylePerMode.insert": "line",
+	"vim.cursorStylePerMode.visual": "underline",
+
+	"vim.normalModeKeyBindingsNonRecursive": [
         // カーソル位置の単語をマルチカーソルで選択
         { "before": [ "<C-n>" ], "after": [ "g", "b" ] },
         { "before": [ "<C-k>" ], "commands": [ "acceptSelectedSuggestion" ] },
@@ -72,7 +76,23 @@
         { "before": ["<leader>", "<"], "commands": [ ":tabm -1" ] },
         // タブを右に移動
         { "before": ["<leader>", ">"], "commands": [ ":tabm +1" ] },
+		// 文末へ移動
+        { "before": ["L"], "after": [ "$" ] },
+		// 文頭へ移動
+        { "before": ["H"], "after": [ "0" ] },
 	],
-	"editor.wordWrap": "on"
+	"vim.insertModeKeyBindingsNonRecursive": [
+		// JJでエスケープ
+		{ "before": ["J", "J"], "after": ["<Esc>"]},
+		
+	],
+	"vim.visualModeKeyBindingsNonRecursive": [
+		// JJでエスケープ
+		{ "before": ["J", "J"], "after": ["<Esc>"]},
+		// 文末へ移動
+        { "before": ["L"], "after": [ "$" ] },
+		// 文頭へ移動
+        { "before": ["H"], "after": [ "0" ] },
 
+	]
 }
