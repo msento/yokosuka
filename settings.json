@@ -1,0 +1,78 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Default Light+",
+    "editor.renderWhitespace": "all",
+    "editor.fontSize": 13,
+    "editor.minimap.enabled": false,
+    "files.encoding": "shiftjis",
+    "files.associations": {
+        "*.oml": "html"
+    },
+ 	"files.eol": "\n",
+	"files.autoGuessEncoding": true,
+
+	"workbench.iconTheme": "vscode-icons",
+	"editor.snippetSuggestions": "top",
+	"editor.tabCompletion": "on",
+    "editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.formatOnPaste": true,
+	
+	"vim.hlsearch": true,
+	"vim.leader": "<space>",
+	"vim.visualstar": true,
+	"vim.useCtrlKeys": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // カーソル位置の単語をマルチカーソルで選択
+        { "before": [ "<C-n>" ], "after": [ "g", "b" ] },
+        { "before": [ "<C-k>" ], "commands": [ "acceptSelectedSuggestion" ] },
+        // 前のタブを表示
+        { "before": [ "g", "r" ], "after": [ "g", "T" ] },
+        // ハイライトクリア
+        { "before": [ "<leader>", "\/" ], "commands": [ ":noh" ] },
+        // ファイル保存
+        { "before": [ "<leader>", "w" ], "commands": [ ":w" ] },
+        // プレビュー表示を開いたままにする
+        { "before": [ "<leader>", "k" ], "commands": [ "workbench.action.keepEditor" ] },
+        // サイドバーの開閉
+        { "before": [ "<leader>", "b" ], "commands": [ "workbench.action.toggleSidebarVisibility" ] },
+        // 新規ファイル
+        { "before": [ "<leader>", "n" ], "commands": [ "workbench.action.files.newUntitledFile" ] },
+        // クイックオープンを開く
+        { "before": [ "<leader>", "p" ], "commands": [ "workbench.action.quickOpen" ] },
+        // ファイル内シンボル検索
+        { "before": [ "<leader>", "o" ], "commands": [ "workbench.action.gotoSymbol" ] },
+        // ワークスペース内シンボル検索
+        { "before": [ "<leader>", "t" ], "commands": [ "workbench.action.showAllSymbols" ] },
+        // ファイルエクスプローラーを選択
+        { "before": [ "<leader>", "e" ], "commands": [ "workbench.view.explorer" ] },
+        // 変数の型定義を参照
+        { "before": [ "<leader>", "g", "d" ], "commands": [ "editor.action.goToTypeDefinition" ] },
+        // 変数の参照箇所の表示
+        { "before": [ "g", "f" ], "commands": [ "editor.action.referenceSearch.trigger" ] },
+        // 現在のタブ以外を閉じる
+        { "before": [ "<C-w>", "<C-o>" ], "commands": [ ":tabo" ] },
+        // 保存＆閉じる
+        { "before": ["Z", "Z"], "commands": [ ":wq" ] },
+        // 前のタブを表示
+        { "before": ["C-h"], "commands": [ "workbench.action.previousEditor" ] },
+        // 次のタブを表示
+        { "before": ["C-l"], "commands": [ "workbench.action.nextEditor" ] },
+        // 前に戻る
+        { "before": ["C-o"], "commands": [ "workbench.action.navigateBack" ] },
+        // 次に進む
+        { "before": ["C-i"], "commands": [ "workbench.action.navigateForward" ] },
+        // パネルの開閉
+        { "before": ["C-j"], "commands": [ "workbench.action.togglePanel" ] },
+        // 上移動
+        { "before": ["K"], "after": ["5", "k"] },
+        // 下移動
+        { "before": ["J"], "after": ["5", "j"] },
+        // タブを左に移動
+        { "before": ["<leader>", "<"], "commands": [ ":tabm -1" ] },
+        // タブを右に移動
+        { "before": ["<leader>", ">"], "commands": [ ":tabm +1" ] },
+	],
+	"editor.wordWrap": "on"
+
+}
