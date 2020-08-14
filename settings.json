@@ -8,7 +8,6 @@
     "editor.minimap.enabled": false,
 	"editor.snippetSuggestions": "top",
 	"editor.tabCompletion": "on",
-	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
 	"editor.formatOnPaste": true,
 
@@ -32,10 +31,10 @@
         { "before": [ "<C-k>" ], "commands": [ "acceptSelectedSuggestion" ] },
         // 前のタブを表示
         { "before": [ "g", "r" ], "after": [ "g", "T" ] },
-        // ハイライトクリア
-        { "before": [ "<leader>", "\/" ], "commands": [ ":noh" ] },
         // ファイル保存
         { "before": [ "<leader>", "w" ], "commands": [ ":w" ] },
+        // ファイルを閉じる(保存してあるやつ)
+        { "before": [ "<leader>", "q" ], "commands": [ ":q" ] },
         // プレビュー表示を開いたままにする
         { "before": [ "<leader>", "k" ], "commands": [ "workbench.action.keepEditor" ] },
         // サイドバーの開閉
@@ -68,31 +67,25 @@
         { "before": ["C-i"], "commands": [ "workbench.action.navigateForward" ] },
         // パネルの開閉
         { "before": ["C-j"], "commands": [ "workbench.action.togglePanel" ] },
-        // 上移動
-        { "before": ["K"], "after": ["5", "k"] },
-        // 下移動
-        { "before": ["J"], "after": ["5", "j"] },
-        // タブを左に移動
-        { "before": ["<leader>", "<"], "commands": [ ":tabm -1" ] },
-        // タブを右に移動
-        { "before": ["<leader>", ">"], "commands": [ ":tabm +1" ] },
 		// 文末へ移動
         { "before": ["L"], "after": [ "$" ] },
 		// 文頭へ移動
         { "before": ["H"], "after": [ "0" ] },
 	],
 	"vim.insertModeKeyBindingsNonRecursive": [
-		// JJでエスケープ
-		{ "before": ["J", "J"], "after": ["<Esc>"]},
+		// jjでエスケープ
+		{ "before": ["j", "j"], "after": ["<Esc>"]},
 		
 	],
 	"vim.visualModeKeyBindingsNonRecursive": [
-		// JJでエスケープ
-		{ "before": ["J", "J"], "after": ["<Esc>"]},
+		// jjでエスケープ
+		{ "before": ["j", "j"], "after": ["<Esc>"]},
 		// 文末へ移動
         { "before": ["L"], "after": [ "$" ] },
 		// 文頭へ移動
         { "before": ["H"], "after": [ "0" ] },
 
-	]
+	],
+	"window.zoomLevel": 0
 }
+
