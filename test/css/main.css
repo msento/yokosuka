@@ -1,0 +1,19 @@
+div.main {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    border: solid 1px #999999;
+}
+
+div.error {
+    color: red;
+    font-size: small;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+span.memo {
+    color: #999999;
+    font-size: small;
+}
