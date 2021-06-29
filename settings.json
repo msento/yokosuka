@@ -1,21 +1,17 @@
 {
 	"workbench.startupEditor": "newUntitledFile",
     "workbench.colorTheme": "Default Light+",
-	"workbench.iconTheme": "vscode-icons",
 
 	"editor.renderWhitespace": "all",
     "editor.fontSize": 13,
     "editor.minimap.enabled": false,
 	"editor.snippetSuggestions": "top",
-	"editor.tabCompletion": "on",
-	"editor.detectIndentation": false,
-	"editor.formatOnPaste": true,
+    "editor.tabCompletion": "on",
 
 	"files.encoding": "shiftjis",
     "files.associations": {
         "*.oml": "html"
     },
- 	"files.eol": "\n",
 	"files.autoGuessEncoding": true,
 
 	"vim.hlsearch": true,
@@ -55,8 +51,6 @@
         { "before": [ "g", "f" ], "commands": [ "editor.action.referenceSearch.trigger" ] },
         // 現在のタブ以外を閉じる
         { "before": [ "<C-w>", "<C-o>" ], "commands": [ ":tabo" ] },
-        // 保存＆閉じる
-        { "before": ["Z", "Z"], "commands": [ ":wq" ] },
         // 前のタブを表示
         { "before": ["C-h"], "commands": [ "workbench.action.previousEditor" ] },
         // 次のタブを表示
@@ -86,6 +80,22 @@
         { "before": ["H"], "after": [ "0" ] },
 
 	],
-	"window.zoomLevel": 0
+    "window.zoomLevel": 0,
+	"editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+	},
+    "editor.detectIndentation": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "vue",
+    ],
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "vetur.experimental.templateInterpolationService": true,
 }
-
