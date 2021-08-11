@@ -67,13 +67,9 @@
         { "before": ["H"], "after": [ "0" ] },
 	],
 	"vim.insertModeKeyBindingsNonRecursive": [
-		// jjでエスケープ
-		{ "before": ["j", "j"], "after": ["<Esc>"]},
 		
 	],
 	"vim.visualModeKeyBindingsNonRecursive": [
-		// jjでエスケープ
-		{ "before": ["j", "j"], "after": ["<Esc>"]},
 		// 文末へ移動
         { "before": ["L"], "after": [ "$" ] },
 		// 文頭へ移動
